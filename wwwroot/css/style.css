@@ -1,0 +1,65 @@
+body
+{
+    background-color: lightblue;
+}
+
+
+
+#LinksIndex div
+{
+    text-align: right;
+}
+
+#HeadlineIndex
+{
+    text-align: center;
+}
+
+#HeadlineVideos
+{
+    text-align: center;
+}
+
+#Video1
+{
+    display: flex;
+    justify-content: center;
+}
+
+#Video2
+{
+    display: flex;
+    justify-content: center;
+}
+
+#Video3
+{
+    display: flex;
+    justify-content: center;
+}
+
+#Buttons1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Buttons2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Buttons3
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#HeadlineAboutMe
+{
+    text-align: center;
+}
