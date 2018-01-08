@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comments</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
+</head>
+<body>
+    <div class="LinksIndex">
+        <div class="LinksIndex" id="LinksIndex">
+            <div><a href="index">Front Page</a></div>
+            <div><a href="videos">About Me</a></div>  
+            <div><a href="about">Videos</a></div>          
+        </div>
+    </div>
+
+    <div id="page_content">
+
+    </div>
+
+    <script>
+        $.getJSON("http://localhost:3000/comments", function (data) {
+            var html = "";
+            data.forEach(function(element) {
+                html += "<h1>" + element.name + "</h1>";
+                html += "<p>" + element.comment + "</p>" 
+            }, this);
+        
+            $("#page_content").html(html); // inject the html into the div with id "page_content"
+        });
+    </script>
+
+<div class="wrapper">
+
+<form method="post" action="/comments">
+    <p>Name</p>
+            <input type="text" required="required" name="Name" placeholder="string"/>
+    <br><br>
+    <p>Comment</p>
+            <input type="text" required="required" name="Comment" placeholder="string"/>
+    <br><br>
+            <input type="submit"/>
+    </form>
+
+</body>
+</html>
